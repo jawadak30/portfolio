@@ -26,7 +26,7 @@ const Hero = () => {
       />
 
       {/* Foreground content */}
-      <div className="relative z-1 text-center max-w-screen-md">
+      <div className="relative z-1 text-center  ">
         <Badge className="rounded-full border-none">
           <Zap className="fill-current" />
           Junior Fullstack Web Developer

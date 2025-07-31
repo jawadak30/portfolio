@@ -20,7 +20,7 @@ const footerLinks = [
 const Footer = () => {
   return (
     <footer className="mt-20">
-      <div className="max-w-screen-md mx-auto">
+      <div className="  mx-auto">
         {/* <div className="py-12 flex flex-col justify-start items-center">
 
           <svg
