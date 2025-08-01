@@ -2,10 +2,20 @@
 export default {
   content: [
     './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',  // adjust this if your code lives elsewhere
+    './src/**/*.{js,ts,jsx,tsx}',  // adjust if needed
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        shine: {
+          '0%': { 'background-position': '100%' },
+          '100%': { 'background-position': '-100%' },
+        },
+      },
+      animation: {
+        shine: 'shine 5s linear infinite',
+      },
+    },
   },
   plugins: [],
-}
+};

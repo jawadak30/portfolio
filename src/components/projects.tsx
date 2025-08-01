@@ -45,6 +45,38 @@ import brands from '../assets/cocollab/all brands.png';
 import logincocollab from '../assets/cocollab/login cocollab.png';
 import registercocollab from '../assets/cocollab/register cocollab.png';
 
+
+
+import home1ista from '../assets/ista/ista home1.png';
+import home2ista from '../assets/ista/ista home2.png';
+import home3ista from '../assets/ista/ista home3.png';
+import home4ista from '../assets/ista/ista home 4.png';
+import home5ista from '../assets/ista/ista home 5.png';
+import home6ista from '../assets/ista/ista home 11.png';
+// import homephone from '../assets/ista/ista home 1 phone.png';
+import modal_logins from '../assets/ista/ista modal logins.png';
+import modal_register from '../assets/ista/ista modal register.png';
+import login_ista from '../assets/ista/login ista.png';
+import register_ista from '../assets/ista/register ista.png';
+import login_ista_admin from '../assets/ista/login admin.png';
+import auth_user from '../assets/ista/auth user.png';
+import auth_user_dark from '../assets/ista/auth user dark.png';
+// import auth_user_phone from '../assets/ista/auth user phone.png';
+import comments from '../assets/ista/comments.png';
+import post_details from '../assets/ista/post details.png';
+// import post_create from '../assets/ista/create post.png';
+// import profile_user from '../assets/ista/profile user.png';
+import modules from '../assets/ista/modules.png';
+import modules_details from '../assets/ista/modules details.png';
+import sectors from '../assets/ista/sectors.png';
+import teachers from '../assets/ista/teachers.png';
+import teachers2 from '../assets/ista/teachers 2.png';
+import teachers3 from '../assets/ista/teachers 3.png';
+import options from '../assets/ista/options.png';
+
+
+
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -190,7 +222,30 @@ const Projects = () => {
       title: "ISTAM Platform - For OFPPT (ISTA Mohammédia)",
       description:
         "Multi-role system: Teacher, Intern, Candidate, Admin for managing appointments, medical records, secretaries, billing, training sessions, and PDF generation.",
-      images: ["/placeholder.svg"],
+      images: [home1ista,
+  home2ista,
+  home3ista,
+  home4ista,
+  home5ista,
+  home6ista,
+  modal_logins,
+  modal_register,
+  login_ista,
+  register_ista,
+  login_ista_admin,
+  auth_user,
+  auth_user_dark,
+  comments,
+  post_details,
+  // post_create,
+  // profile_user,
+  modules,
+  modules_details,
+  sectors,
+  teachers,
+  teachers2,
+  teachers3,
+  options],
       technologies: ["Laravel", "Docker", "Blade", "Ajax", "SQL"],
       githubUrl: "https://github.com/jawadak30/ISTAM-Platform",
     },

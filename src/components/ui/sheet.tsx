@@ -50,8 +50,14 @@ function SheetContent({
   side = "right",
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Content> & {
-  side?: "top" | "right" | "bottom" | "left"
+  side?: "top" | "right" | "bottom" | "left";
 }) {
+  const navLinks = [
+    { href: "#about", label: "About" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
+  ];
+
   return (
     <SheetPortal>
       <SheetOverlay />
@@ -71,14 +77,31 @@ function SheetContent({
         )}
         {...props}
       >
-        {children}
+        {/* 🚀 Add navigation links here */}
+        <nav className="flex flex-col gap-4 p-4 display-flex items-center justify-center padding-top-4">
+          {navLinks.map((link) => (
+            <SheetPrimitive.Close asChild key={link.href}>
+              <a
+                href={link.href}
+                className="text-lg font-medium hover:underline text-content focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring data-[state=open]:bg-secondary rounded-md p-2 transition-colors"
+              >
+                {link.label}
+              </a>
+            </SheetPrimitive.Close>
+          ))}
+        </nav>
+
+        {/* Any additional children passed to SheetContent */}
+        {/* {children} */}
+
+        {/* Close button */}
         <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none">
           <XIcon className="size-4" />
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
       </SheetPrimitive.Content>
     </SheetPortal>
-  )
+  );
 }
 
 function SheetHeader({ className, ...props }: React.ComponentProps<"div">) {

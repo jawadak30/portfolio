@@ -6,7 +6,6 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom"; // ✅ for Vite + React
 
 type NavMenuProps = {
   className?: string;
@@ -20,27 +19,27 @@ export const NavMenu = ({ className, ...props }: NavMenuProps) => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>About</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <Link to="/about" className="block px-4 py-2 hover:bg-muted">
+            <a href="#about" className="block px-4 py-2 hover:bg-muted">
               What is this?
-            </Link>
+            </a>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <Link to="/projects" className="block px-4 py-2 hover:bg-muted">
+            <a href="#projects" className="block px-4 py-2 hover:bg-muted">
               View Projects
-            </Link>
+            </a>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuTrigger>Contact</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <Link to="/contact" className="block px-4 py-2 hover:bg-muted">
+            <a href="#contact" className="block px-4 py-2 hover:bg-muted">
               Get in Touch
-            </Link>
+            </a>
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
