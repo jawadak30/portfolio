@@ -1,9 +1,7 @@
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
@@ -15,32 +13,38 @@ type NavMenuProps = {
 export const NavMenu = ({ className, ...props }: NavMenuProps) => {
   return (
     <NavigationMenu className={cn("hidden lg:flex", className)} {...props}>
-      <NavigationMenuList>
+      <NavigationMenuList className="gap-4">
         <NavigationMenuItem>
-          <NavigationMenuTrigger>About</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <a href="#about" className="block px-4 py-2 hover:bg-muted">
-              What is this?
-            </a>
-          </NavigationMenuContent>
+          <a
+            href="#about"
+            className="px-4 py-2 font-medium hover:text-primary transition-colors"
+          >
+            About
+          </a>
         </NavigationMenuItem>
-
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <a href="#projects" className="block px-4 py-2 hover:bg-muted">
-              View Projects
-            </a>
-          </NavigationMenuContent>
+          <a
+            href="#projects"
+            className="px-4 py-2 font-medium hover:text-primary transition-colors"
+          >
+            Projects
+          </a>
         </NavigationMenuItem>
-
+                <NavigationMenuItem>
+          <a
+            href="#skills"
+            className="px-4 py-2 font-medium hover:text-primary transition-colors"
+          >
+            Skills
+          </a>
+        </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Contact</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <a href="#contact" className="block px-4 py-2 hover:bg-muted">
-              Get in Touch
-            </a>
-          </NavigationMenuContent>
+          <a
+            href="#contact"
+            className="px-4 py-2 font-medium hover:text-primary transition-colors"
+          >
+            Contact
+          </a>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
