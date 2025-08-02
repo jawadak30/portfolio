@@ -24,7 +24,7 @@ const Hero = () => {
         )}
       />
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center">
+      <div className="relative z-1 text-center max-w-4xl mx-auto flex flex-col items-center">
         <Badge className="rounded-full border-none flex items-center justify-center gap-2">
           <Zap className="fill-current" />
           Junior Fullstack Web Developer

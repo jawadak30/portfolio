@@ -182,7 +182,7 @@ const Projects = () => {
         SettingsImg,
         Settings2Img,
       ],
-      technologies: ["Laravel 11", "SQL", "React"],
+      technologies: ["Laravel 11", "SQL", "React" ,"typescript","tailwindcss"],
     },
     {
       title:
@@ -198,7 +198,7 @@ const Projects = () => {
         logincocollab,
         registercocollab,
       ],
-      technologies: ["Laravel 11", "Blade", "SQL"],
+      technologies: ["Laravel 11", "Blade", "SQL","Css"],
       liveUrl: "https://www.cocollab.ma/",
     },
     {
@@ -219,7 +219,7 @@ const Projects = () => {
         medical_records,
         appoinetements,
       ],
-      technologies: ["Laravel 11", "Blade", "SQL"],
+      technologies: ["Laravel 11", "Blade", "SQL","Css"],
       githubUrl: "https://github.com/jawadak30/hospital_management.git",
     },
     {
@@ -258,7 +258,7 @@ const Projects = () => {
         teachers3,
         options,
       ],
-      technologies: ["Laravel", "Docker", "Blade", "Ajax", "SQL"],
+      technologies: ["Laravel", "Docker", "Blade", "Ajax", "SQL","Css"],
       githubUrl: "https://github.com/jawadak30/ISTAM-Platform",
     },
   ];

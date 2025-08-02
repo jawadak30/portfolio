@@ -56,7 +56,7 @@ const Footer = ({
   copyright = "© Jawad Akabour. All rights reserved.",
 }: Footer7Props) => {
   return (
-    <section className="flex flex-col items-center justify-center" id="Contact">
+    <section className="flex flex-col items-center justify-center" id="contact">
       <p className="mb-4 text-xs text-muted-foreground md:pl-5">Contact</p>
       <div className="container">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
