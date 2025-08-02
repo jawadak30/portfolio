@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Download } from "lucide-react";
 import type { HTMLAttributes } from "react";
 import { GithubLogo } from "./icons";
-import resume from "../assets/resume english.pdf";
+import resume from "../assets/jawad akabour english resume.pdf";
 import profile from '../assets/profile/profile.png'
 import { easeInOut } from "framer-motion";
 
