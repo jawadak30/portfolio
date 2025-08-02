@@ -1,6 +1,5 @@
 import { Badge } from "@/components/ui/badge";
 import { Building2, Calendar } from "lucide-react";
-import { GraduationCap } from "lucide-react";
 
 interface ExperienceItemProps {
   title: string;

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence, easeInOut } from "framer-motion";
 
 interface FullScreenCarouselModalProps {
   images: string[];
@@ -19,7 +19,7 @@ export default function FullScreenCarouselModal({
   // Variants for horizontal sliding animation
   const variants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 300 : -300,  // Enter from right if next, left if prev
+      x: direction > 0 ? 300 : -300,
       opacity: 0,
       y: 0,
     }),
@@ -27,26 +27,41 @@ export default function FullScreenCarouselModal({
       x: 0,
       opacity: 1,
       y: 0,
-      transition: { duration: 0.1, ease: "easeOut" }, // Fast animation
+      transition: { duration: 0.1, ease: easeInOut },
     },
     exit: (direction: number) => ({
-      x: direction < 0 ? 300 : -300, // Exit to left if prev, right if next
+      x: direction < 0 ? 300 : -300,
       opacity: 0,
       y: 0,
-      transition: { duration: 0.1, ease: "easeIn" },
+      transition: { duration: 0.1, ease: easeInOut },
     }),
   };
 
-  // Swipe threshold
   const swipeConfidenceThreshold = 10000;
   const swipePower = (offset: number, velocity: number) => {
     return Math.abs(offset) * velocity;
   };
 
-  // Change page and direction
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
   };
+
+  // Close on ESC key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
+  // Prevent background scroll
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
 
   return (
     <div
@@ -72,8 +87,8 @@ export default function FullScreenCarouselModal({
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={1}
             dragMomentum={false}
-            onDragEnd={(e, { offset, velocity }) => {
-              const swipe = swipePower(offset.x, velocity.x);
+            onDragEnd={(_event, info) => {
+              const swipe = swipePower(info.offset.x, info.velocity.x);
 
               if (swipe < -swipeConfidenceThreshold) {
                 paginate(1); // swipe left → next
@@ -87,9 +102,9 @@ export default function FullScreenCarouselModal({
         </AnimatePresence>
 
         {/* Close button */}
-        <button style={{ color: 'red' }}
+        <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-red text-3xl font-bold hover:text-red-500"
+          className="absolute top-2 right-2 text-red-500 text-3xl font-bold hover:text-red-400"
           aria-label="Close Modal"
         >
           ×

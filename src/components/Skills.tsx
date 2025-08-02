@@ -1,5 +1,4 @@
 import {
-  Code,
   Database,
   GitBranch,
   ShieldCheck,
@@ -61,7 +60,6 @@ const Skills = () => {
       heading="My Technical Skills"
       subheading="Skills"
       features={skills}
-      headingClassName="shiny-text"
     />
   );
 };
