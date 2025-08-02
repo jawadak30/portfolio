@@ -203,7 +203,7 @@ const Projects = () => {
     },
     {
       title: "Hospitallia - Hospital Management System",
-      description: "Small Hospital Management System.",
+      description: " Multi-role and multi-language system: Small Hospital Management System.",
       images: [
         Home1,
         Home2,
@@ -233,7 +233,7 @@ const Projects = () => {
     {
       title: "ISTAM Platform - For OFPPT (ISTA Mohammédia)",
       description:
-        "Multi-role system: Teacher, Intern, Candidate, Admin for managing appointments, medical records, secretaries, billing, training sessions, and PDF generation.",
+        "Multi-role and multi-language system: Teacher, Intern, Candidate, Admin for managing appointments, medical records, secretaries, billing, training sessions, and PDF generation.",
       images: [
         home1ista,
         home2ista,
