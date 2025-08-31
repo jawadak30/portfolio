@@ -121,8 +121,10 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: theme('colors.border');
+    outline-color: theme('colors.ring');
   }
+
   body {
     @apply bg-background text-foreground;
   }

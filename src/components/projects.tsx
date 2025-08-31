@@ -64,6 +64,8 @@ import teachers2 from '../assets/ista/teachers 2.png';
 import teachers3 from '../assets/ista/teachers 3.png';
 import options from '../assets/ista/options.png';
 
+import flashimmo from '../assets/flashimmo/flashimmo.png';
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -76,15 +78,12 @@ interface ProjectCardProps {
 
 // Animation variant for each card
 const cardVariant = {
-  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  hidden: { opacity: 0, y: 50, scale: 0.9 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: {
-      duration: 2,
-      ease: easeInOut, // fixed easing here
-    },
+    transition: { duration: 1.5, ease: easeInOut },
   },
 };
 
@@ -170,6 +169,14 @@ const Projects = () => {
   const closeModal = () => setSelectedImages(null);
 
   const projects = [
+      {
+    title: "FlashImmo4You.com - Real Estate Platform",
+    description:
+      "Developed a full real estate platform with property management, inquiries, reservations, and secure multi-role authentication.",
+    images: [flashimmo],
+    technologies: ["Symfony", "SQL", "Docker", "Twig"],
+    liveUrl: "https://flashimmo4you.com/",
+  },
     {
       title: "Sagement Vôtre - Pregnancy Monitoring Cabinet System",
       description:
