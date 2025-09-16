@@ -75,8 +75,8 @@ const Experience = () => {
   const experiences = [
     {
       title: "Full-stack Developer (Pre-employment Internship)",
-      company: "Flash Ingénierie · Hybrid – Rabat, Morocco",
-      period: "Aug 2025 – Present",
+      company: "Flash Web· Hybrid – Rabat, Morocco",
+      period: "Aug 2025 – September 2025",
       description:
         "Developed FlashImmo4You.com – a real estate platform with multi-role management, secure authentication, and project management.",
       technologies: ["Symfony", "SQL", "Docker", "Twig"],

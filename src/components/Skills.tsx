@@ -1,4 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
 import {
   Database,
   GitBranch,
@@ -9,7 +12,6 @@ import {
   LayoutTemplate,
   Boxes,
 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { FiUsers, FiActivity, FiCheckSquare } from "react-icons/fi";
 import {
   FaHtml5,
@@ -85,9 +87,9 @@ const SoftSkillsSection = () => (
             rotateX: 15,
             rotateY: 15,
             scale: 1.1,
-            boxShadow: "0 25px 60px rgba(0,0,0,0.6)",
+            boxShadow: "0 25px 60px rgba(0,0,0,0.3)",
           }}
-          className="bg-white dark:bg-[#1a1a1a] p-6 rounded-xl shadow-lg cursor-pointer"
+          className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg cursor-pointer transition-colors"
           style={{ perspective: "1000px" }}
         >
           {/* ICON */}
@@ -144,10 +146,10 @@ const Skills = () => {
       techIcons: [
         <FaPhp className="text-indigo-500 w-10 h-10" key="php" />,
         <SiLaravel className="text-red-500 w-10 h-10" key="laravel" />,
-        <SiSymfony className="text-black w-10 h-10" key="symfony" />,
+        <SiSymfony className="text-gray-900 dark:text-white w-10 h-10" key="symfony" />,
         <FaNodeJs className="text-green-600 w-10 h-10" key="node" />,
         <FaPython className="text-yellow-500 w-10 h-10" key="python" />,
-        <SiExpress className="text-gray-700 w-10 h-10" key="express" />,
+        <SiExpress className="text-gray-700 dark:text-gray-300 w-10 h-10" key="express" />,
       ],
     },
     {
@@ -177,10 +179,10 @@ const Skills = () => {
     {
       title: "Tools",
       description: "Git, GitHub, GitLab",
-      icon: <GitBranch className="w-12 h-12 text-gray-800" />,
+      icon: <GitBranch className="w-12 h-12 text-gray-800 dark:text-gray-200" />,
       techIcons: [
         <FaGitAlt className="text-orange-600 w-10 h-10" key="git" />,
-        <FaGithub className="text-black w-10 h-10" key="github" />,
+        <FaGithub className="text-black dark:text-white w-10 h-10" key="github" />,
         <FaGitlab className="text-orange-400 w-10 h-10" key="gitlab" />,
       ],
     },
@@ -197,12 +199,12 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 bg-[#0a0a0a] text-white">
+    <section id="skills" className="py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors">
       <div className="max-w-5xl mx-auto text-center mb-12">
         <Badge variant="secondary" className="mb-4">
           Skills
         </Badge>
-        <h2 className="text-4xl sm:text-5xl font-bold tracking-tight">
+        <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
           My Technical Skills
         </h2>
       </div>
@@ -212,7 +214,7 @@ const Skills = () => {
           <motion.div
             key={skill.title}
             initial={{ opacity: 0, scale: 0.8, y: 50 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }} // appear once
+            animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{
               duration: 0.8,
               delay: index * 0.3,
@@ -222,9 +224,9 @@ const Skills = () => {
               rotateX: 20,
               rotateY: 20,
               scale: 1.15,
-              boxShadow: "0 30px 60px rgba(0,0,0,0.6)",
+              boxShadow: "0 30px 60px rgba(0,0,0,0.3)",
             }}
-            className="bg-[#111] p-6 rounded-xl shadow-lg cursor-pointer"
+            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg cursor-pointer transition-colors"
             style={{ perspective: "1200px" }}
           >
             {/* ICON */}
@@ -240,7 +242,7 @@ const Skills = () => {
             <motion.h3
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 3.5, repeat: Infinity }}
-              className="text-xl font-semibold mb-2"
+              className="text-xl font-semibold mb-2 text-gray-900 dark:text-white"
             >
               {skill.title}
             </motion.h3>
@@ -249,7 +251,7 @@ const Skills = () => {
             <motion.p
               animate={{ opacity: [1, 0.85, 1] }}
               transition={{ duration: 5, repeat: Infinity }}
-              className="text-gray-400"
+              className="text-gray-700 dark:text-gray-300"
             >
               {skill.description}
             </motion.p>
