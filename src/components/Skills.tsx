@@ -199,7 +199,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors">
+    <section id="skills" className="py-20 px-6 bg-gray-50 dark:bg-[#0a0a0a] transition-colors">
       <div className="max-w-5xl mx-auto text-center mb-12">
         <Badge variant="secondary" className="mb-4">
           Skills
