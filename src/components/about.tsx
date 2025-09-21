@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { Download } from "lucide-react";
 import { GithubLogo } from "./icons";
 import resume from "../assets/jawad akabour english resume.pdf";
-import profile from "../assets/profile/profile.png";
+import profile from "../assets/profile/profile.jpg";
 import { easeInOut } from "framer-motion";
 
 const About = () => {
